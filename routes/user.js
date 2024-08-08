@@ -12,7 +12,7 @@ import jwt from "jsonwebtoken";
 export const userRoutes = express.Router();
 
 //! GET Request for getting all user
-userRoutes.get("/all", verifyUserToken, async (req, res) => {
+userRoutes.get("/all", async (req, res) => {
   try {
     const users = await User.find();
     return res.status(200).send({
@@ -191,7 +191,7 @@ userRoutes.post("/reset-password/:token", async (req, res) => {
 });
 
 //!POST Request for logging out a user
-userRoutes.post("/logout", verifyUserToken, async (req, res) => {
+userRoutes.get("/logout", verifyUserToken, async (req, res) => {
   try {
     const token = req.headers?.cookie.split("=")[1];
     if (!token) {

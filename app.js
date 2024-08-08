@@ -111,12 +111,55 @@ const html = `<h1>Steps to follow while cloning and running the project</h1>
     "pid":"", //post _id
     "comment":""
 }
+</code></pre>
+<ul>
+<li>##### Get all the registered user <mark>get</mark> <code>"/user/all"</code></li>
+</ul>
+<pre><code>{
+    //no data
+}
+</code></pre>
+<ul>
+<li>##### Logout the user <mark>get</mark> <code>"/user/logout"</code></li>
+</ul>
+<pre><code>{
+    //no data
+}
+</code></pre>
+<ul>
+<li>##### Change the forgot password <mark>post</mark> <code>"/user/forgot-password"</code></li>
+</ul>
+<pre><code>{
+    "email":""
+}
+</code></pre>
+<ul>
+<li>##### Reset the password <mark>post</mark> <code>"/user/reset-password/:token"</code></li>
+</ul>
+<pre><code>{
+    "newPassword":"",
+    "confPassword":""
+}
+</code></pre>
+<ul>
+<li>##### Get all the post of user <mark>get</mark> <code>"/post/all"</code></li>
+</ul>
+<pre><code>{
+    //no data
+}
+</code></pre>
+<ul>
+<li>##### Get a post of user by postID <mark>get</mark> <code>"/:postID"</code></li>
+</ul>
+<pre><code>{
+    //no data
+}
 </code></pre>`;
 app.get("/", (req, res) => {
   res.send(html);
 });
 app.use("/user", userRoutes);
-app.use("/post",verifyUserToken, postRoutes);
+app.use("/post", verifyUserToken, postRoutes);
 
 app.listen(8000, async (err) => {
   if (err) return err.message;

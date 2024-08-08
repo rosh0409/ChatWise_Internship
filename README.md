@@ -95,3 +95,45 @@
     "comment":""
 }
 ```
+- ##### Get all the registered user <mark style="background-color:blue; padding:4px">get</mark> `"/user/all"`
+```json
+{
+    //no data
+}
+```
+
+- ##### Logout the user <mark style="background-color:blue; padding:4px">get</mark> `"/user/logout"`
+```json
+{
+    //no data
+}
+```
+
+- ##### Change the forgot password <mark style="background-color:green; padding:4px">post</mark> `"/user/forgot-password"`
+```json
+{
+    "email":""
+}
+```
+
+- ##### Reset the password <mark style="background-color:green; padding:4px">post</mark> `"/user/reset-password/:token"`
+```json
+{
+    "newPassword":"",
+    "confPassword":""
+}
+```
+
+- ##### Get all the post of user <mark style="background-color:blue; padding:4px">get</mark> `"/post/all"`
+```json
+{
+    //no data
+}
+```
+
+- ##### Get a post of user by postID <mark style="background-color:blue; padding:4px">get</mark> `"/:postID"`
+```json
+{
+    //no data
+}
+```
