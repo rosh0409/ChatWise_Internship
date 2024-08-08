@@ -9,7 +9,7 @@
 
 ## API
 #### Base URL `http://localhost:8000`
-- ##### Registration $\colorbox{green}{{\color{white}{post}}}$ `"/user/register"`
+- ##### Registration <mark style="background-color:green; padding:4px">post</mark> `"/user/register"`
 
 ```json
 {
@@ -19,7 +19,7 @@
     "confPassword":""
 }
 ```
-- ##### Login $\colorbox{green}{{\color{white}{post}}}$ `"/user/login"`
+- ##### Login <mark style="background-color:green; padding:4px">post</mark> `"/user/login"`
 ```json
 {
     "email":"",
@@ -27,47 +27,47 @@
 }
 ```
 
-- ##### User's Feed $\colorbox{blue}{{\color{white}{get}}}$ `"/user/feed"`
+- ##### User's Feed <mark style="background-color:blue; padding:4px">get</mark> `"/user/feed"`
 ```json
 {
     //no data
 }
 ```
-- ##### Create Post $\colorbox{green}{{\color{white}{post}}}$ `"/post/create"`
+- ##### Create Post <mark style="background-color:green; padding:4px">post</mark> `"/post/create"`
 ```json
 {
     "title":"",
     "desc":""
 }
 ```
-- ##### Update Post $\colorbox{purple}{{\color{white}{patch}}}$ `"/post/update/:postID"`
+- ##### Update Post <mark style="background-color:purple; padding:4px">patch</mark> `"/post/update/:postID"`
 ```json
 {
     "title":"",
     "desc":""
 }
 ```
-- ##### Delete Post $\colorbox{red}{{\color{white}{delete}}}$ `"/post/delete/:postID"`
+- ##### Delete Post <mark style="background-color:red; padding:4px">delete</mark> `"/post/delete/:postID"`
 ```json
 {
     //no data
 }
 ```
 
-- ##### See all friend requests $\colorbox{blue}{{\color{white}{get}}}$ `"/user/requests"`
+- ##### See all friend requests <mark style="background-color:blue; padding:4px">get</mark> `"/user/requests"`
 ```json
 {
     //no data
 }
 ```
-- ##### Send friend request $\colorbox{green}{{\color{white}{post}}}$ `"/user/friend-request"`
+- ##### Send friend request <mark style="background-color:green; padding:4px">post</mark> `"/user/friend-request"`
 ```json
 {
     "requestId":""
 }
 ```
 
-- ##### Accept/Reject friend request $\colorbox{green}{{\color{white}{post}}}$ `"/user/confirm-request"`
+- ##### Accept/Reject friend request <mark style="background-color:green; padding:4px">post</mark> `"/user/confirm-request"`
 ```json
 {
     "followId":"",
@@ -75,20 +75,20 @@
 }
 ```
 
-- ##### Unfollow a friend $\colorbox{green}{{\color{white}{post}}}$ `"/user/unfollow"`
+- ##### Unfollow a friend <mark style="background-color:green; padding:4px">post</mark> `"/user/unfollow"`
 ```json
 {
     "unfollowId":""
 }
 ```
-- ##### Like a post $\colorbox{green}{{\color{white}{post}}}$ `"/user/like"`
+- ##### Like a post <mark style="background-color:green; padding:4px">post</mark> `"/user/like"`
 ```json
   {
     "pid":"" //post _id
   }
 ```
 
-- ##### Comment on post $\colorbox{green}{{\color{white}{post}}}$ `"/user/comment"`
+- ##### Comment on post <mark style="background-color:green; padding:4px">post</mark> `"/user/comment"`
 ```json
 {
     "pid":"", //post _id

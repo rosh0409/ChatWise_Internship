@@ -236,11 +236,11 @@ userRoutes.get("/requests", verifyUserToken, async (req, res) => {
         status: "failed",
         message: "Invaild User ID",
       });
-    const requests = await User.find({ _id: uid });
+    const user = await User.find({ _id: uid });
     return res.status(200).json({
       status: "success",
       message: "All Friend Requests",
-      requests,
+      user,
     });
   } catch (error) {
     return res.status(500).send({

@@ -48,7 +48,6 @@ postRoutes.post("/create", async (req, res) => {
   try {
     const { title, desc } = req.body;
     const uid = req.uid;
-    console.log("p uid :: " + uid);
     const existingUser = await User.findById(uid);
     if (!existingUser) {
       return res.status(400).json({

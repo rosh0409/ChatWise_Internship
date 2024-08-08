@@ -9,7 +9,6 @@ const verifyUserToken = async (req, res, next) => {
       });
     }
     const token = req.headers?.cookie.split("=")[1];
-    console.log("process.env.JWTSECRETKEY :: " + process.env.JWTSECRETKEY);
     jwt.verify(token, process.env.JWTSECRETKEY, (err, user) => {
       if (err) {
         return res.status(400).json({
