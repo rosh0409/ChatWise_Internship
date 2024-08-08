@@ -1,6 +1,6 @@
 # Steps to follow while cloning and running the project
 
-1. Clone the project `git clone `
+1. Clone the project `git clone https://github.com/rosh0409/ChatWise_Internship.git`
 
 2. Execute the command `npm i` to install required dependencies
 
